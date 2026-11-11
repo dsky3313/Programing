@@ -31,3 +31,9 @@ Acrobat Pro DC로 PDF(외관조사망도)를 볼 때, 옆에 폴더트리를 띄
 
 ## 다음 단계
 - Windows에서 실제 실행해 보고 오류/레이아웃 수정 (`pip install pillow` 필요).
+
+## 2026-11-11 추가 반영
+- exe 빌드: GitHub Actions(`.github/workflows/build-photo-viewer.yml`)가 Windows에서 `photo_viewer.exe`를 만들어 Artifact로 올림.
+- Acrobat 창 오른쪽에 자동으로 붙음 (0.3초 확인). 오른쪽 자리가 없으면 Acrobat 폭을 줄임. 상단 "옆에 붙이기" 체크로 끄기 가능.
+- 담당자 드롭다운 순서: 폴더명 앞 번호(01, 02, 03… 직함순).
+- 프로젝트 폴더 자동 지정: 열려 있는 탐색기 폴더 → exe 위치의 상위 폴더 중 `태블릿야장`+`현장사진`이 있는 곳. 못 찾으면 저장값 → 기본 경로 → 선택 창. PDF 담당자를 못 찾으면 다시 탐색.

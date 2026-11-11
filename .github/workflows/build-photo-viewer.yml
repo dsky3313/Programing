@@ -1,10 +1,7 @@
 name: Build photo_viewer.exe
 
+# 테스트 중에는 빌드하지 않음. 최종본일 때만 수동 실행 (Actions 탭 > Run workflow)
 on:
-  push:
-    paths:
-      - "photo_viewer/**"
-      - ".github/workflows/build-photo-viewer.yml"
   workflow_dispatch:
 
 jobs:

@@ -16,7 +16,12 @@ from PIL import ImageOps
 from PIL import ImageTk
 
 DEFAULT_PROJECT_ROOT = r"C:\Users\User\Desktop\김도호\2026\구룡\1015 구룡지하차도 하이퍼링크"
-CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "photo_viewer.json")
+if getattr(sys, "frozen", False):
+    # exe로 실행 시: 설정 파일을 exe 옆에 저장 (__file__은 임시 폴더를 가리킴)
+    APP_DIR = os.path.dirname(sys.executable)
+else:
+    APP_DIR = os.path.dirname(os.path.abspath(__file__))
+CONFIG_PATH = os.path.join(APP_DIR, "photo_viewer.json")
 PDF_DIR_NAME = "태블릿야장"
 PHOTO_DIR_NAME = "현장사진"
 RESIZED_DIR_NAME = "크기변환"
